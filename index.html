@@ -12,11 +12,11 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#1c1512" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c2603a'/%3E%3Cpath d='M10 9h12v3h-4.5v11h-3V12H10z' fill='%23f6efe4'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#e3e6e9" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111111'/%3E%3Cpath d='M10 9h12v3h-4.5v11h-3V12H10z' fill='%23ffffff'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..800;1,14..32,400..800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,400..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -32,13 +32,14 @@
       </a>
       <nav class="nav__links" aria-label="Sections">
         <a href="#compare">Why</a>
+        <a href="#calc">Your math</a>
         <a href="#prep">Prep</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#faq">FAQ</a>
       </nav>
       <a class="btn btn--primary btn--sm" href="#book" data-book>Book my free call</a>
       <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
-        <span></span><span></span>
+        <span class="nav__toggle-label">Menu</span><i><span></span><span></span></i>
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu" hidden>
@@ -47,6 +48,7 @@
       <a href="#roadmap">The 5-step roadmap</a>
       <a href="#faq">Mini-FAQ</a>
       <a href="#fit">Is this you?</a>
+      <a href="#calc">Do your own math</a>
       <a href="#pdf">Get the free PDF</a>
       <a class="btn btn--primary" href="#book" data-book>Book my free call</a>
     </div>
@@ -55,35 +57,53 @@
   <main id="main">
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
-      <div class="wrap hero__grid">
-        <div class="hero__copy">
-          <p class="eyebrow eyebrow--light"><span class="dot"></span>The Canadian Panjabi 9‑5 Exit Plan · Free guide</p>
-          <h1 class="display">Leave your 9‑5 with an online coaching business that takes <em>30 minutes a day</em>.</h1>
-          <p class="hero__lede">Written for 20 to 35 year old Panjabis in Canada working at Walmart, warehouses, restaurants and delivery. I made <strong>$3,200+ online</strong> from one platform. This is the exact plan I followed.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#book" data-book>Book my free call</a>
-            <a class="btn btn--ghost" href="#pdf">Send me the free PDF</a>
-          </div>
-          <p class="hero__note"><strong>No coaching experience needed.</strong> You only have to be one or two steps ahead of the person you help.</p>
-          <ul class="hero__facts" aria-label="Who this is for">
-            <li><span class="label">For</span><span>Walmart, fast food, warehouse, retail &amp; delivery workers</span></li>
-            <li><span class="label">Time</span><span>30 min / day, scheduled like a shift</span></li>
-            <li><span class="label">Cost</span><span>$0 to start, free tools only</span></li>
-          </ul>
-        </div>
+      <div class="wrap hero__stage">
+        <div class="hero__ring hero__ring--a" aria-hidden="true"></div>
+        <div class="hero__ring hero__ring--b" aria-hidden="true"></div>
+        <div class="hero__rule" aria-hidden="true"><i></i><i></i></div>
+
+        <aside class="anno anno--a">
+          <span class="anno__num">01</span>
+          <p>For 20 to 35 year old Panjabis in Canada working at Walmart, warehouses, restaurants and delivery.</p>
+        </aside>
+
         <figure class="hero__art">
           <div class="hero__frame">
             <img src="assets/hero.jpg" alt="Gurshan in a cream sweater working on a laptop by a window overlooking the Toronto skyline and CN Tower" width="1639" height="702" fetchpriority="high" />
           </div>
-          <figcaption class="hero__stamp">
-            <span class="hero__stamp-label">Punched out</span>
-            <span class="hero__stamp-sub">for the last time</span>
-          </figcaption>
-          <div class="hero__badge">
+          <figcaption class="hero__badge">
             <span class="hero__badge-num">$3,200+</span>
-            <span class="hero__badge-label">earned online, from one platform</span>
-          </div>
+            <span class="hero__badge-label">earned online from one platform</span>
+          </figcaption>
         </figure>
+
+        <aside class="anno anno--b">
+          <span class="anno__num">02</span>
+          <p>30 minutes a day, scheduled like a shift. $0 to start, free tools only.</p>
+        </aside>
+
+        <aside class="anno anno--c">
+          <span class="anno__num">03</span>
+          <p>No coaching experience needed. You only have to be one or two steps ahead of the person you help.</p>
+        </aside>
+      </div>
+
+      <div class="hero__wordmark" aria-hidden="true"><span>Exit Plan</span></div>
+
+      <div class="hero__bar">
+        <div class="wrap hero__bar-grid">
+          <div class="hero__copy">
+            <p class="eyebrow eyebrow--plain">The Canadian Panjabi 9‑5 Exit Plan · Free guide</p>
+            <h1>Leave your 9‑5 with an online coaching business that takes <em>30 minutes a day</em>.</h1>
+          </div>
+          <div class="hero__side">
+            <p class="hero__lede">Written for Panjabis in Canada working low-wage shifts. I made <strong>$3,200+ online</strong> from one platform. This is the exact plan I followed.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#book" data-book>Book my free call</a>
+              <a class="btn btn--ghost" href="#pdf">Send me the free PDF</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -222,6 +242,103 @@
           <h2>People who started with 30 minutes a day.</h2>
         </div>
         <div class="stories__grid" id="storiesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ DO YOUR OWN MATH (interactive) ============ -->
+    <section class="section calc" id="calc">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">Do your own math</p>
+          <h2>See what 30 minutes a day could turn into.</h2>
+          <p class="lead">Move the sliders to match your life. The chart shows your next 12 months and the month your online income passes your paycheque.</p>
+        </div>
+
+        <div class="calc__grid reveal">
+          <form class="calc__controls" id="calcForm" aria-label="Your numbers">
+            <fieldset class="calc__group">
+              <legend>Your job today</legend>
+              <label class="range">
+                <span class="range__head"><span>Hourly pay</span><output id="outWage" for="inWage">$17.50</output></span>
+                <input type="range" id="inWage" name="wage" min="15" max="35" step="0.5" value="17.5" />
+                <span class="range__scale"><span>$15</span><span>$35</span></span>
+              </label>
+              <label class="range">
+                <span class="range__head"><span>Hours a week</span><output id="outHours" for="inHours">40 hrs</output></span>
+                <input type="range" id="inHours" name="hours" min="20" max="60" step="1" value="40" />
+                <span class="range__scale"><span>20</span><span>60</span></span>
+              </label>
+            </fieldset>
+
+            <fieldset class="calc__group">
+              <legend>Your online income</legend>
+              <label class="range">
+                <span class="range__head"><span>What each customer pays you a month</span><output id="outPrice" for="inPrice">$300</output></span>
+                <input type="range" id="inPrice" name="price" min="50" max="600" step="10" value="300" />
+                <span class="range__scale"><span>$50</span><span>$600</span></span>
+              </label>
+              <label class="range">
+                <span class="range__head"><span>Paying customers at one time</span><output id="outClients" for="inClients">14 customers</output></span>
+                <input type="range" id="inClients" name="clients" min="1" max="30" step="1" value="14" />
+                <span class="range__scale"><span>1</span><span>30</span></span>
+              </label>
+              <label class="range">
+                <span class="range__head"><span>New customers you add each month</span><output id="outRate" for="inRate">2 a month</output></span>
+                <input type="range" id="inRate" name="rate" min="1" max="5" step="1" value="2" />
+                <span class="range__scale"><span>Slow &amp; steady</span><span>All in</span></span>
+              </label>
+            </fieldset>
+
+            <details class="calc__how">
+              <summary>How this is calculated</summary>
+              <p>Job income is hourly pay × hours × 52 ÷ 12. Your first paying customer lands in month 2, then you add new customers each month until you reach your target. Online income is customers × what each one pays. Time online is about 1 hour per customer per week plus the 30 minute daily content block. Nothing here is a promise. It is your own numbers, so you can see what is realistic for you.</p>
+            </details>
+          </form>
+
+          <div class="calc__results" aria-live="polite">
+            <div class="calc__hook" id="calcHook">
+              <span class="calc__hook-label">Your online income passes your paycheque in</span>
+              <span class="calc__hook-value" id="hookMonth">Month 7</span>
+              <span class="calc__hook-sub" id="hookSub">with 12 customers paying $300 a month. Your job pays $3,033.</span>
+            </div>
+
+            <div class="calc__tiles">
+              <div class="tile tile--job">
+                <span class="tile__label">Your job</span>
+                <span class="tile__num" id="tileJob">$3,033</span>
+                <span class="tile__sub" id="tileJobSub">a month · 40 hrs a week</span>
+              </div>
+              <div class="tile tile--coach">
+                <span class="tile__label">Online income at target</span>
+                <span class="tile__num" id="tileCoach">$4,200</span>
+                <span class="tile__sub" id="tileCoachSub">a month · 17.5 hrs a week</span>
+              </div>
+            </div>
+
+            <figure class="calc__chart">
+              <svg id="calcChart" viewBox="0 0 640 260" role="img" aria-labelledby="chartTitle" preserveAspectRatio="xMidYMid meet">
+                <title id="chartTitle">Online income by month against your current paycheque</title>
+              </svg>
+              <figcaption class="calc__legend">
+                <span><i class="sw sw--under"></i>Below your paycheque</span>
+                <span><i class="sw sw--over"></i>Above your paycheque</span>
+                <span><i class="sw sw--line"></i>Your job today</span>
+              </figcaption>
+            </figure>
+
+            <ul class="calc__facts">
+              <li><strong id="factYear">$33,600</strong><span>earned online in your first 12 months</span></li>
+              <li><strong id="factHours">22.5 hrs</strong><span>a week back in your life at target</span></li>
+              <li><strong id="factPerHour">$55</strong><span>per hour online vs <em id="factWageCmp">$17.50</em> at your job</span></li>
+            </ul>
+
+            <div class="calc__cta">
+              <a class="btn btn--primary" href="#pdf" id="calcSend">Send me this plan</a>
+              <a class="btn btn--ghost btn--dark" href="#book" data-book>Walk through it on a free call</a>
+            </div>
+            <p class="calc__note">This is a scenario built from your inputs, not a prediction or a guarantee. Real results depend on your niche, effort and consistency.</p>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -135,7 +135,7 @@
       host.className = "calendly-inline-widget";
       calWrap.appendChild(host);
       window.Calendly.initInlineWidget({
-        url: calendlyUrl({ hide_gdpr_banner: "1", background_color: "fbf8f2", primary_color: "c4623a", text_color: "14100d" }),
+        url: calendlyUrl({ hide_gdpr_banner: "1", background_color: "ffffff", primary_color: "111111", text_color: "111111" }),
         parentElement: host,
       });
       calWrap.classList.add("is-loaded");
@@ -162,7 +162,8 @@
   /* ---------- lead forms (PDF section + exit offer) ---------- */
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   function leadPayload(email, source) {
-    return Object.assign({ email, source, page: location.href, ts: new Date().toISOString(), form_name: "exit-plan-pdf" }, utm);
+    const scenario = store.get("exitplan.scenario", null);
+    return Object.assign({ email, source, page: location.href, ts: new Date().toISOString(), form_name: "exit-plan-pdf" }, utm, scenario ? { scenario } : {});
   }
   async function sendLead(payload) {
     if (!SITE_CONFIG.formEndpoint) return { ok: false, reason: "no-endpoint" };
@@ -311,6 +312,121 @@
     section.hidden = false;
     const fitNote = $(".fit__note");
     if (fitNote) fitNote.textContent = "These are examples of who the guide is written for, not client results. Real client stories are below.";
+  })();
+
+
+  /* ---------- do your own math: live scenario calculator ---------- */
+  (function calculator() {
+    const form = $("#calcForm");
+    const svg = $("#calcChart");
+    if (!form || !svg) return;
+    const ins = { wage: $("#inWage"), hours: $("#inHours"), price: $("#inPrice"), clients: $("#inClients"), rate: $("#inRate") };
+    const outs = { wage: $("#outWage"), hours: $("#outHours"), price: $("#outPrice"), clients: $("#outClients"), rate: $("#outRate") };
+    const money = (n) => "$" + Math.round(n).toLocaleString("en-CA");
+    const CONTENT_HOURS = 3.5; // 30 minutes a day
+    const HOURS_PER_CLIENT = 1;
+    const ns = "http://www.w3.org/2000/svg";
+    let lastMonth = null;
+
+    function setText(el, text, bump = true) {
+      if (!el || el.textContent === text) return;
+      el.textContent = text;
+      if (bump && !reduceMotion) { el.classList.remove("num-bump"); void el.offsetWidth; el.classList.add("num-bump"); }
+    }
+    function paintTrack(input) {
+      const min = +input.min, max = +input.max, v = +input.value;
+      input.style.setProperty("--pct", ((v - min) / (max - min)) * 100 + "%");
+    }
+    function scenario() {
+      const wage = +ins.wage.value, hours = +ins.hours.value, price = +ins.price.value, target = +ins.clients.value, rate = +ins.rate.value;
+      const job = wage * hours * 52 / 12;
+      const months = [];
+      let exit = null, year = 0;
+      for (let m = 1; m <= 12; m++) {
+        const clients = Math.min(target, Math.max(0, m - 1) * rate);
+        const income = clients * price;
+        year += income;
+        if (exit === null && income >= job && income > 0) exit = m;
+        months.push({ m, clients, income });
+      }
+      const coachHours = target * HOURS_PER_CLIENT + CONTENT_HOURS;
+      const coachIncome = target * price;
+      return { wage, hours, price, target, rate, job, months, exit, year, coachHours, coachIncome };
+    }
+    function drawChart(sc) {
+      while (svg.childNodes.length > 1) svg.removeChild(svg.lastChild); // keep <title>
+      const W = 640, H = 260, padL = 8, padR = 8, padT = 26, padB = 30;
+      const innerW = W - padL - padR, innerH = H - padT - padB;
+      const maxV = Math.max(sc.job * 1.15, ...sc.months.map((x) => x.income)) || 1;
+      const gap = 10, bw = (innerW - gap * 11) / 12;
+      const y = (v) => padT + innerH - (v / maxV) * innerH;
+      const mk = (tag, attrs) => { const el = document.createElementNS(ns, tag); Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v)); return el; };
+      // bars
+      sc.months.forEach((pt, i) => {
+        const x = padL + i * (bw + gap);
+        const top = y(pt.income);
+        const over = pt.income >= sc.job && pt.income > 0;
+        const bar = mk("rect", { class: "bar", x, y: Math.min(top, padT + innerH - 3), width: bw, height: Math.max(3, padT + innerH - top), rx: 6, fill: over ? "#fbbf24" : "rgba(255,255,255,0.28)" });
+        svg.appendChild(bar);
+        const lbl = mk("text", { x: x + bw / 2, y: H - 10, "text-anchor": "middle", "font-size": "11", fill: "rgba(255,255,255,0.6)", "font-weight": "600" });
+        lbl.textContent = pt.m; svg.appendChild(lbl);
+        if (pt.income > 0 && (i === 11 || pt.m === sc.exit)) {
+          const v = mk("text", { x: x + bw / 2, y: top - 8, "text-anchor": "middle", "font-size": "12", fill: over ? "#fbbf24" : "#fff", "font-weight": "700" });
+          v.textContent = money(pt.income); svg.appendChild(v);
+        }
+      });
+      // job line
+      const jy = y(sc.job);
+      svg.appendChild(mk("line", { x1: padL, x2: W - padR, y1: jy, y2: jy, stroke: "#e0342f", "stroke-width": 1.5, "stroke-dasharray": "5 5" }));
+      const jl = mk("text", { x: W - padR, y: jy - 7, "text-anchor": "end", "font-size": "12", fill: "#ff6b66", "font-weight": "600" });
+      jl.textContent = "Your job · " + money(sc.job) + " / mo"; svg.appendChild(jl);
+      const axis = mk("text", { x: padL, y: H - 10, "font-size": "11", fill: "rgba(255,255,255,0.45)", "text-anchor": "start" });
+      axis.textContent = ""; svg.appendChild(axis);
+    }
+    function render() {
+      Object.values(ins).forEach(paintTrack);
+      const sc = scenario();
+      outs.wage.textContent = "$" + sc.wage.toFixed(2);
+      outs.hours.textContent = sc.hours + " hrs";
+      outs.price.textContent = money(sc.price);
+      outs.clients.textContent = sc.target + (sc.target === 1 ? " customer" : " customers");
+      outs.rate.textContent = sc.rate + " a month";
+
+      const hook = $("#calcHook");
+      if (sc.exit) {
+        hook.classList.remove("is-never");
+        setText($("#hookMonth"), "Month " + sc.exit, sc.exit !== lastMonth);
+        setText($("#hookSub"), "with " + sc.months[sc.exit - 1].clients + " customers paying " + money(sc.price) + " a month. Your job pays " + money(sc.job) + ".", false);
+      } else {
+        hook.classList.add("is-never");
+        const need = Math.ceil(sc.job / sc.price);
+        setText($("#hookMonth"), "Not within 12 months at these numbers", true);
+        setText($("#hookSub"), "You'd need about " + need + " customers at " + money(sc.price) + ", or a higher price. Try moving the sliders.", false);
+      }
+      lastMonth = sc.exit;
+      setText($("#tileJob"), money(sc.job));
+      setText($("#tileJobSub"), "a month · " + sc.hours + " hrs a week", false);
+      setText($("#tileCoach"), money(sc.coachIncome));
+      setText($("#tileCoachSub"), "a month · " + sc.coachHours.toFixed(1).replace(/\.0$/, "") + " hrs a week", false);
+      setText($("#factYear"), money(sc.year));
+      const back = sc.hours - sc.coachHours;
+      setText($("#factHours"), (back > 0 ? back.toFixed(1).replace(/\.0$/, "") : "0") + " hrs");
+      const perHour = sc.coachIncome / (sc.coachHours * 52 / 12);
+      setText($("#factPerHour"), money(perHour));
+      setText($("#factWageCmp"), "$" + sc.wage.toFixed(2), false);
+      drawChart(sc);
+      store.set("exitplan.scenario", { wage: sc.wage, hours: sc.hours, price: sc.price, clients: sc.target, rate: sc.rate, job: Math.round(sc.job), coaching: sc.coachIncome, exit_month: sc.exit, year1: Math.round(sc.year) });
+    }
+    Object.values(ins).forEach((el) => el.addEventListener("input", render));
+    render();
+    const send = $("#calcSend");
+    if (send) send.addEventListener("click", () => {
+      track("calc_send_plan", store.get("exitplan.scenario", {}));
+      const msg = $("#pdf .lead-card__title");
+      if (msg) msg.textContent = "Send me the PDF with my plan";
+    });
+    let tracked = false;
+    form.addEventListener("input", () => { if (!tracked) { tracked = true; track("calc_used", {}); } });
   })();
 
   /* ---------- reading progress + nav shadow + sticky bar ---------- */

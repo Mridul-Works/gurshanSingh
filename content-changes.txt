@@ -422,6 +422,37 @@ HOW TO    Collect from the friends and family you coach first (Step 3).
           changed, get written permission, and paste it into the array.
           Keep their words, first name plus initial, and city.
 
+---------------------------------------------------------------------
+22. DO YOUR OWN MATH (new, interactive)
+---------------------------------------------------------------------
+ORIGINAL  (none)
+FINAL     Eyebrow "Do your own math". H2 "See what 30 minutes a day could
+          turn into." Lead "Move the sliders to match your life. The chart
+          shows your next 12 months and the month coaching passes your
+          paycheque."
+          Sliders: hourly pay ($15 to $35), hours a week (20 to 60), what
+          each customer pays you a month ($50 to $600), paying customers
+          at one time (1 to 30), new customers each month (1 to 5).
+          Wording uses "customers" and "online income", not "clients" or
+          "coaching", because the course is about earning online in any
+          form.
+          Results: "Your online income passes your paycheque in Month N",
+          two tiles (your job vs online income at target, with hours a
+          week), a 12-month bar chart with your paycheque as a dashed
+          line, and three facts (first-year online total, hours a week
+          back, $ per hour online vs your wage).
+          Buttons: "Send me this plan" (goes to the PDF form and attaches
+          the scenario to the lead) and "Walk through it on a free call".
+          "How this is calculated" explains every assumption.
+          Note: "This is a scenario built from your inputs, not a
+          prediction or a guarantee. Real results depend on your niche,
+          effort and consistency."
+WHY       An interactive hook that makes the reader do the maths with
+          their own numbers is more convincing than any claim from us, and
+          it stays honest: nothing is predicted, everything is shown as
+          arithmetic the visitor controls. The scenario is saved with the
+          lead so the call can start from their numbers.
+
 =====================================================================
 SETUP NEEDED TO ACTUALLY RECEIVE LEADS (edit script.js, SITE_CONFIG)
 =====================================================================

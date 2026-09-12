@@ -1,0 +1,445 @@
+THE CANADIAN PANJABI 9-5 EXIT PLAN
+Content change log: Canva doc  ->  webpage v1  ->  final webpage
+=====================================================================
+
+How to read this file
+  ORIGINAL  = text exactly as it appeared in the Canva doc (DAHSkvngMwo)
+  V1        = first webpage build (same message, typos fixed)
+  FINAL     = current webpage, rewritten for conversion and lead capture
+  WHY       = the reason for the change
+Every em dash (—) has been removed from the webpage. Sentences were split
+or joined with commas, periods or colons instead.
+
+---------------------------------------------------------------------
+1. HERO / TITLE
+---------------------------------------------------------------------
+ORIGINAL  Cover image text: "FREE GUIDE / The Canadian Panjabi 9-5 Exit Plan /
+          START YOUR ONLINE COACHING BUSINESS"
+          Heading: "HOW I MADE $3200+ ONLINE ON TWITTER? (A-Z ROADMAP PDF)"
+V1        Eyebrow: "Free guide · A–Z roadmap"
+          H1: "The Canadian Panjabi 9-5 Exit Plan"
+FINAL     Eyebrow: "The Canadian Panjabi 9-5 Exit Plan · Free guide"
+          H1: "Leave your 9-5 with an online coaching business that takes
+          30 minutes a day."
+WHY       The original headline is about Gurshan. The final headline is a
+          promise to the reader. The guide title still appears in the
+          eyebrow and in the cover image so brand recognition is kept.
+
+---------------------------------------------------------------------
+2. HERO SUBTITLE
+---------------------------------------------------------------------
+ORIGINAL  "For 20–35 year old Panjabi's in Canada working low-wage jobs who
+          want a realistic way to exit their job starting to build income
+          on side."
+V1        "How I made $3,200+ online from Twitter — and the realistic plan
+          for 20–35 year old Panjabis in Canada to start building income
+          on the side with just 30 minutes a day."
+FINAL     "Written for 20 to 35 year old Panjabis in Canada working at
+          Walmart, warehouses, restaurants and delivery. I made $3,200+
+          online from one platform. This is the exact plan I followed."
+WHY       Fixes "Panjabi's" (apostrophe error) and the broken sentence.
+          Names the jobs so the reader recognises themselves in line two.
+          Keeps the proof number but moves it after the audience.
+
+---------------------------------------------------------------------
+3. HERO BUTTONS AND SUPPORT LINES
+---------------------------------------------------------------------
+ORIGINAL  (none; the doc had no buttons)
+V1        "Book a free 1:1 call"  /  "Read the plan ↓"
+FINAL     "Book my free call"  /  "Send me the free PDF"
+          New line under the buttons: "No coaching experience needed. You
+          only have to be one or two steps ahead of the person you help."
+          Facts row: "For: Walmart, fast food, warehouse, retail & delivery
+          workers" / "Time: 30 min / day, scheduled like a shift" /
+          "Cost: $0 to start, free tools only"
+WHY       First-person button copy converts better. The second button now
+          captures an email instead of just scrolling. The biggest
+          objection ("I am not an expert") is answered before the fold
+          instead of buried in the FAQ.
+
+---------------------------------------------------------------------
+4. STATS STRIP (new)
+---------------------------------------------------------------------
+ORIGINAL  (none)
+V1        (none)
+FINAL     "30 min a day, scheduled like a shift" / "5 steps, done in order" /
+          "$0 to start, free tools only" / "1k followers is enough for a
+          first client"
+WHY       Pulls the four most reassuring numbers from the body of the doc
+          into one glance.
+
+---------------------------------------------------------------------
+5. FREE PDF SECTION (new lead capture)
+---------------------------------------------------------------------
+ORIGINAL  The doc itself was the PDF; there was no way to capture a reader.
+V1        (none)
+FINAL     Eyebrow: "Free PDF"
+          H2: "Get the full plan as a PDF, plus the prep checklist."
+          Lead: "Read it on your break, on the bus, or after your shift.
+          Enter your email and it lands in your inbox in about a minute."
+          Bullets: "The 5-step roadmap with the niche examples" / "The tools
+          list and the 30 minute daily block" / "The content mix and the
+          first client script"
+          Form: email field + "Send me the PDF"
+          Fine print: "No spam. One email with the PDF, then the occasional
+          tip. Unsubscribe any time."
+          Alt: "Prefer to talk? Book the free call instead."
+WHY       Most visitors will not book a call on the first visit. An email
+          is a lower-friction yes and lets you follow up.
+
+---------------------------------------------------------------------
+6. THE PATTERN (intro paragraph)
+---------------------------------------------------------------------
+ORIGINAL  "If you're working at Walmart, fast food restaurant, warehouse,
+          retail, or delivery in Canada, you already know the pattern: work
+          hard, feel drained, and still have money stress at the end of the
+          month. This guide will show you the brief plan on how to build an
+          online coaching business with just 30 minutes a day and leave you
+          job at Walmart."
+V1        Eyebrow: "You already know the pattern"
+          H2: "Work hard, feel drained, still stressed about money at the
+          end of the month."
+          Lead: "If you're working at Walmart, a fast food restaurant, a
+          warehouse, retail or delivery in Canada, this guide shows you a
+          brief plan to build an online coaching business — and leave that
+          job behind."
+FINAL     Same as V1 with the em dash removed: "...build an online coaching
+          business and leave that job behind."
+WHY       Fixes "leave you job". Turns the pain line into the heading.
+
+---------------------------------------------------------------------
+7. WALMART VS ONLINE COACHING
+---------------------------------------------------------------------
+ORIGINAL  Table: "Walmart | Online Coaching"
+          "Work 40+ hours a week | Work 5-10 hours a week"
+          "Earn $2500 per month | Earn $4000+ per month"
+          "Stress from manager and supervisors | Become your own boss"
+          "Fixed shifts | Flexible"
+V1        Two timesheet cards.
+          Walmart: "HRS 40+ hours a week" / "PAY $2,500 per month" /
+          "BOSS Stress from managers & supervisors" / "SHIFT Fixed shifts,
+          no say"
+          Online coaching: "HRS 5–10 hours a week" / "PAY $4,000+ per month"
+          / "BOSS You. Become your own boss" / "SHIFT Flexible — you set
+          the hours"
+FINAL     Same, with "SHIFT Flexible, you set the hours"
+WHY       Same numbers as the doc. Presented as punch-clock timesheets to
+          match the reader's daily reality.
+
+---------------------------------------------------------------------
+8. WHAT YOU NEED BEFORE YOU BEGIN
+---------------------------------------------------------------------
+ORIGINAL  "Laptop and internet connection"
+          "Tools : Chatgpt or Claude AI, Canva AI, MailChimp, ManyChat,
+          Calendly"
+          "A realistic time block: 30 minutes/day (schedule it like a shift)"
+          "One platform you'll use for 30 days (pick one): Instagram,
+          TikTok, or LinkedIn"
+          "A way to take calls: Zoom or Google Meet"
+          "A simple way to get paid later : e-Transfer or Paypal"
+V1/FINAL  H2: "Everything on this list is free or already in your pocket."
+          Interactive checklist with a counter ("0 / 6 ready", then
+          "All set. Go to Step 1"):
+          "Laptop and internet connection" + "Any working laptop. Your
+          phone works for content too."
+          "Free tools" + "ChatGPT or Claude AI, Canva AI, MailChimp,
+          ManyChat, Calendly."
+          "A realistic time block: 30 minutes a day" + "Schedule it like a
+          shift. Same time, every day."
+          "One platform for 30 days" + "Pick one: Instagram, TikTok or
+          LinkedIn. Not all three."
+          "A way to take calls" + "Zoom or Google Meet."
+          "A simple way to get paid later" + "e-Transfer or PayPal. Set it
+          up when your first client says yes."
+WHY       Fixes capitalisation (ChatGPT, PayPal) and spacing. Checkboxes
+          make the reader commit a small action before the ask.
+
+---------------------------------------------------------------------
+9. STEP 1: PICK A NICHE
+---------------------------------------------------------------------
+ORIGINAL  "If you don't have a niche? Don' worry. How to find a Niche? There
+          are three steps to it-:
+          Find "Why": Your purpose or belief. What do you really care
+          about? What difference do you really want to make in the world.
+          Find "How": Which social media platform are you going to use?
+          Find "What": Coaching (for my programme)
+          Niche finder GPT – Click here
+          "Be very specific in your niche". Example -: If you niche is
+          fitness, don't say, "I help people get fit" Instead, say' "I help
+          men gain muscle." "I help women lose fat.""
+V1        "Don't have a niche? Don't worry. Finding one takes three
+          questions:"
+          "Find your "Why": Your purpose or belief. What do you really care
+          about? What difference do you want to make?"
+          "Find your "How": Which social media platform are you going to
+          use?"
+          "Find your "What": Coaching — that's what this programme is built
+          around."
+          Link card: "Niche Finder GPT. Free custom GPT with keyword prompts
+          to narrow your niche"
+          Callout: "Be very specific in your niche." DON'T "I help people
+          get fit." DO "I help men gain muscle." DO "I help women lose fat."
+FINAL     Same as V1 with: "Find your "What": Coaching. That's what this
+          programme is built around."
+WHY       Fixes "Don' worry", "you niche", "say'" and the "-:" punctuation.
+
+---------------------------------------------------------------------
+10. STEP 2: BUILD AUDIENCE
+---------------------------------------------------------------------
+ORIGINAL  "After you found your niche, start making content. Divide your
+          content into 3 parts-: 60% - Talking about your niche 30% - Sales
+          10% - Random stuff. You don't need 100k followers to get your
+          first client. You will get your first client with 1k followers
+          as well. You would have even found out your Ideal Customer
+          Profile (ICP) by this time as well. For e.g. You help men between
+          the age of 20-40 gain muscles who have only 30 minutes per day to
+          achieve it."
+V1        "Once you've found your niche, start making content. Divide it
+          into three parts:" + animated 60/30/10 bar.
+          Legend: "Talking about your niche — teach, show, prove" / "Sales
+          — offers, CTAs, results" / "Random stuff — you, your day, your
+          story"
+          Stats: "1k followers is enough for your first client. You don't
+          need 100k." / "ICP: By now you'll know your Ideal Customer
+          Profile — e.g. men aged 20–40 who want muscle with only 30
+          minutes a day."
+FINAL     Legend: "60% · Talking about your niche · teach, show, prove" /
+          "30% · Sales · offers, CTAs, results" / "10% · Random stuff ·
+          you, your day, your story"
+          ICP: "By now you'll know your Ideal Customer Profile, for example
+          men aged 20 to 40 who want muscle with only 30 minutes a day."
+WHY       Percentages are visual. The ICP example is a full sentence.
+
+---------------------------------------------------------------------
+11. STEP 3: HELP FRIEND OR FAMILY
+---------------------------------------------------------------------
+ORIGINAL  "Whatever you niche is start by helping people around you.
+          Collect testimonials from your clients and put it on your
+          highlights; this will help audience gain trust in you."
+V1        "Help friends or family first. Whatever your niche, start by
+          helping the people around you. Collect testimonials from these
+          first clients and pin them to your highlights — this is what
+          makes a stranger trust you."
+FINAL     "...pin them to your highlights. This is what makes a stranger
+          trust you."
+WHY       Fixes "you niche". "Stranger" makes the payoff concrete.
+
+---------------------------------------------------------------------
+12. STEP 4: GIVE FREE SERVICE
+---------------------------------------------------------------------
+ORIGINAL  "Give free pdf or free webinar, it helps gain even more trust
+          amongst your potential clients. Make a detailed plan telling
+          everything which tells them everything about they want to know.
+          Don't miss anything! Tell them everything you know fro my
+          experience."
+V1/FINAL  "Give something free. A free PDF or a free webinar builds even
+          more trust with potential clients. Make a detailed plan that
+          tells them everything they want to know."
+          Emphasis line: "Don't hold anything back. Tell them everything
+          you know from your own experience."
+WHY       Fixes the doubled "everything" and "fro my experience".
+
+---------------------------------------------------------------------
+13. STEP 5: START SELLING
+---------------------------------------------------------------------
+ORIGINAL  "Reels are where gain attention. Stories are where you sell. Use
+          Call-to-action (CTA) using "ManyChat" application. CTA is how
+          you came to this free pdf – "DM me pdf", "Comment money" etc.
+          And, people will reach directly to your sales page."
+V1        "REELS are where you gain attention." / "STORIES are where you
+          sell." / "Use a call-to-action (CTA) with the ManyChat app. A CTA
+          is exactly how you found this free guide — "DM me PDF", "Comment
+          MONEY" — and people land directly on your sales page."
+FINAL     "...A CTA is exactly how you found this free guide: "DM me PDF" or
+          "Comment MONEY". People land directly on your sales page."
+WHY       Fixes "where gain attention". Removes the em dashes.
+
+---------------------------------------------------------------------
+14. MINI-FAQ
+---------------------------------------------------------------------
+ORIGINAL  Q1 "Do I need to be an "expert" to coach?" A: "You need to be one
+          or two steps ahead with a repeatable process. Start with beginner
+          outcomes you can actually deliver."
+          Q2 "What if I'm worried people will judge me?" A: "Keep your
+          content practical and professional: tips, checklists, and simple
+          frameworks. You don't need to share your whole life—share useful
+          help."
+          Q3 "Which platform should I choose?" A: "Pick the one you'll use
+          consistently for 30 days. If you like quick videos, choose
+          TikTok. If you like text and networking, choose LinkedIn. If you
+          like community + DMs, choose Instagram."
+          Q4 "How do I get clients if I have a small following?" A: "You
+          don't need followers—you need conversations. Start with DMs,
+          research chats, and referrals from people who already know you."
+          Q5 "When can I reduce hours or quit?" A: "When you have
+          consistent paying clients and a runway. A common target is 3
+          months of steady revenue plus savings before you reduce shifts or
+          leave."
+V1        H2: "The questions everyone asks before they start." Same Q&A.
+FINAL     Q2 answer: "...You don't need to share your whole life. Share
+          useful help."
+          Q3 answer: "...If you like community and DMs, choose Instagram."
+          Q4 heading: "How do I get clients with a small following?"
+          Q4 answer: "You don't need followers. You need conversations..."
+WHY       Em dashes removed. Answers otherwise unchanged; they were good.
+
+---------------------------------------------------------------------
+15. CLOSING CALL TO ACTION
+---------------------------------------------------------------------
+ORIGINAL  "Book a FREE 1:1 online call with me for personalized coaching
+          until you get your first client. Link - 1 hour meeting - Gurshan
+          sidhu. You will get -: 1:1 Weekly Online Call. 24X7 access to my
+          WhatsApp/Instagram. Join skool community free for first 50
+          clients. Free lifetime access to all my upcoming Skool course."
+V1        Eyebrow "Free 1:1 call". H2 "Book a free call with me — I'll coach
+          you until you land your first client." Lead "One personalized
+          online call. No pitch deck, no pressure. We look at where you
+          are, pick your niche and map the first 30 days." Button "Pick a
+          time on Calendly →". Perks: "1:1 weekly online call / Until you
+          get your first client." "24×7 access to my WhatsApp & Instagram /
+          Ask anything, any time." "Free Skool community / For the first 50
+          clients." "Lifetime access to every upcoming Skool course / Free,
+          forever."
+FINAL     Eyebrow "Free 1:1 call · 30 minutes"
+          H2 "Book a free call with me. I'll coach you until you land your
+          first client."
+          Lead "...pick your niche and map your first 30 days."
+          Perk 3: "Free Skool community / Limited to the first 50 clients."
+          Button: "Book my free call →". Perk 2 reworded to "Direct
+          access to me on Instagram". WhatsApp and any phone number
+          references were removed from the page on request.
+          Calendly calendar embedded directly in the page, with fallback
+          "Pick a time. The calendar loads here. If it doesn't, use the
+          button to open Calendly directly." / "Open Calendly"
+          Fine print: "Zoom or Google Meet · Pick any time that suits your
+          shift"
+          After booking: "You're booked. Check your email for the calendar
+          invite. Before the call, think about one thing you could teach a
+          friend. That's usually the niche." / "Get the PDF while you wait"
+WHY       The doc said "1 hour meeting" but the real Calendly slot is 30
+          minutes, so the copy now matches. Embedding the calendar removes
+          a redirect. "Limited to" is honest urgency. The thank-you state
+          keeps the lead engaged.
+
+---------------------------------------------------------------------
+16. EXIT OFFER (new)
+---------------------------------------------------------------------
+ORIGINAL  (none)
+FINAL     Shown once per session when the cursor leaves the window on
+          desktop, or after deep scroll / long read on mobile. Never shown
+          to someone who already left an email or booked.
+          Eyebrow "Before you go". H2 "Take the plan with you." Body "Get
+          the full guide as a PDF and read it after your shift. No cost, no
+          pressure." Form "Send me the PDF". Alt "Or book the free call
+          right now."
+WHY       Last chance to keep a visitor who is leaving without acting.
+
+---------------------------------------------------------------------
+17. MOBILE BOTTOM BAR
+---------------------------------------------------------------------
+V1        Floating pill "Book a free 1:1 call"
+V1.1      Bar: "Free 1:1 call · 30 min" + "Book now"
+FINAL     Bar: "Free PDF" link + "Book my free call" button
+WHY       Both offers are always one tap away on a phone.
+
+---------------------------------------------------------------------
+18. NAVIGATION AND FOOTER
+---------------------------------------------------------------------
+V1        Nav: Why / Prep / Roadmap / FAQ / "Book a free call"
+          Footer: Why leave / What you need / Roadmap / FAQ / Book a call
+          Footer note: "Results shared are personal and not a guarantee of
+          income."
+FINAL     Nav button: "Book my free call" (scrolls to the embedded
+          calendar instead of leaving the site)
+          Mobile menu adds "Get the free PDF"
+          Footer adds "Free PDF" and a privacy line: "Your email is only
+          used to send the guide and occasional tips. It is never sold or
+          shared."
+WHY       Every path to booking stays on the page. Privacy line is needed
+          for ad platforms and builds trust.
+
+---------------------------------------------------------------------
+19. SEO / SHARE TEXT (not visible on the page)
+---------------------------------------------------------------------
+V1        Title: "The Canadian Panjabi 9-5 Exit Plan | Free Guide by Gurshan
+          Sidhu"
+          Description: "A realistic A-Z roadmap for 20–35 year old Panjabis
+          in Canada working low-wage jobs who want to build an online
+          coaching income on the side — 30 minutes a day."
+          Share image: the raw hero banner
+FINAL     Description: "Leave your 9-5 with an online coaching business that
+          takes 30 minutes a day. The free A-Z roadmap for 20 to 35 year
+          old Panjabis in Canada working low-wage jobs. Book a free 1:1
+          call."
+          Share text: "Leave your 9-5 with an online coaching business that
+          takes 30 minutes a day. Free guide plus a free 1:1 call."
+          Share image: assets/og.jpg, 1200 x 630, cropped to keep the cover
+          title and the photo
+WHY       WhatsApp and Instagram DM previews now show a proper card.
+
+---------------------------------------------------------------------
+20. IS THIS YOU? (new, example scenarios)
+---------------------------------------------------------------------
+ORIGINAL  (none)
+FINAL     Eyebrow "Is this you?" H2 "Three people this plan was written
+          for." Lead "Find yourself below. Each one already has a niche.
+          They just haven't called it a business yet."
+          Card 1 "Student in Canada · security guard": "Eight hours at a
+          door. A phone in your pocket. That phone is the business." plus
+          a story paragraph and niche chips (First job in Canada, Student
+          budgeting, Licence exam prep).
+          Card 2 "In Punjab · 10th pass": "No degree. No visa. Clients pay
+          for results, not certificates." Chips: Spoken English, Home
+          fitness, Instagram for shops.
+          Card 3 "At home · wants her own income": "Tired of asking. Ready
+          to earn on your own terms, on your own hours." Chips: Skincare
+          routines, Bridal makeup, Exam study plans.
+          Each card ends with "The plan's target:" using only numbers that
+          already appear in the guide ($4,000+ a month, 5 to 10 hours,
+          under 1k followers).
+          Note under the cards: "These are examples of who the guide is
+          written for, not client results."
+WHY       Requested as testimonials for a security guard earning $4k, a
+          10th-pass boy in Punjab earning $3.5k, and a girl. Invented
+          people and invented earnings presented as real results are
+          illegal under Canada's Competition Act (fake reviews and
+          misleading performance claims) and would damage trust on the
+          call. The same three profiles are used as clearly labelled
+          scenarios instead, which still lets each reader see themselves.
+
+---------------------------------------------------------------------
+21. CLIENT STORIES (new, real testimonials only)
+---------------------------------------------------------------------
+ORIGINAL  (none)
+FINAL     Section "Client stories" with H2 "People who started with 30
+          minutes a day." It is hidden until real quotes are added to
+          SITE_CONFIG.testimonials in script.js. Each card shows the
+          result, the quote, name, city/role and an optional proof link.
+          Footer line: "Shared with permission. Individual results vary and
+          depend on effort, niche and consistency."
+HOW TO    Collect from the friends and family you coach first (Step 3).
+          Ask each for one sentence on where they started and one on what
+          changed, get written permission, and paste it into the array.
+          Keep their words, first name plus initial, and city.
+
+=====================================================================
+SETUP NEEDED TO ACTUALLY RECEIVE LEADS (edit script.js, SITE_CONFIG)
+=====================================================================
+  formEndpoint   Where emails are sent. Free options: Formspree
+                 (formspree.io, create a form, paste the URL), a Make or
+                 Zapier webhook, or the MailChimp API via a webhook.
+                 Until this is set, emails are saved in the visitor's
+                 browser, retried on their next visit, and the visitor is
+                 sent straight to Calendly with the email prefilled so the
+                 booking still captures it.
+  fallbackEmail  Your address. If formEndpoint is empty, the form opens the
+                 visitor's mail app addressed to you.
+  ga4Id          Google Analytics 4 measurement ID (G-XXXX). Optional.
+  metaPixelId    Meta Pixel ID. Optional. Fires a Lead event on form submit
+                 and on a completed Calendly booking.
+
+Calendly: the embedded calendar reads the same URL. Add UTM parameters to
+links you post (?utm_source=instagram&utm_campaign=reel1) and they are
+carried into every booking automatically.
+  testimonials   Array of real client quotes. The Client stories section
+                 stays hidden until it has at least one entry.

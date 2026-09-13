@@ -23,6 +23,9 @@
     //   quote: "I booked the call on a night shift. Three weeks later a guy from my gurdwara paid me to fix his resume and interview prep.",
     //   photo: "assets/clients/harpreet.jpg", proof: "https://..." }
     testimonials: [],
+    // Step videos (optional). Paste a YouTube or Vimeo embed URL per step and a player appears above that step.
+    // Example: { 1: "https://www.youtube.com/embed/VIDEO_ID", 2: "" }
+    stepVideos: {},
   };
 
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -323,7 +326,7 @@
     const ins = { wage: $("#inWage"), hours: $("#inHours"), price: $("#inPrice"), clients: $("#inClients"), rate: $("#inRate") };
     const outs = { wage: $("#outWage"), hours: $("#outHours"), price: $("#outPrice"), clients: $("#outClients"), rate: $("#outRate") };
     const money = (n) => "$" + Math.round(n).toLocaleString("en-CA");
-    const CONTENT_HOURS = 3.5; // 30 minutes a day
+    const CONTENT_HOURS = 7; // 1 hour a day
     const HOURS_PER_CLIENT = 1;
     const ns = "http://www.w3.org/2000/svg";
     let lastMonth = null;
@@ -419,15 +422,26 @@
     }
     Object.values(ins).forEach((el) => el.addEventListener("input", render));
     render();
-    const send = $("#calcSend");
-    if (send) send.addEventListener("click", () => {
-      track("calc_send_plan", store.get("exitplan.scenario", {}));
-      const msg = $("#pdf .lead-card__title");
-      if (msg) msg.textContent = "Send me the PDF with my plan";
-    });
     let tracked = false;
     form.addEventListener("input", () => { if (!tracked) { tracked = true; track("calc_used", {}); } });
   })();
+
+
+  /* ---------- step videos (only if a URL is configured) ---------- */
+  Object.entries(SITE_CONFIG.stepVideos || {}).forEach(([n, url]) => {
+    if (!url) return;
+    const body = $(`.step__body[data-step="${n}"]`);
+    if (!body) return;
+    const wrap = document.createElement("div");
+    wrap.className = "step__video";
+    const frame = document.createElement("iframe");
+    frame.src = url; frame.loading = "lazy"; frame.allowFullscreen = true;
+    frame.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+    frame.title = "Step " + n + " video";
+    wrap.appendChild(frame);
+    const h3 = $("h3", body);
+    if (h3) h3.after(wrap); else body.prepend(wrap);
+  });
 
   /* ---------- reading progress + nav shadow + sticky bar ---------- */
   const bar = $("#progressBar");
@@ -485,7 +499,7 @@
   function updateCount() {
     if (!count) return;
     const done = boxes.filter((b) => b.checked).length;
-    count.textContent = done === boxes.length && boxes.length ? "All set. Go to Step 1" : `${done} / ${boxes.length} ready`;
+    count.textContent = done === boxes.length && boxes.length ? "All set. Book your free call." : `${done} / ${boxes.length} ready`;
   }
   if (boxes.length) {
     const state = store.get(KEY, {});

@@ -1038,3 +1038,64 @@ main { counter-reset: sec; }
 .nav__toggle .nav__toggle-label { width: auto; height: auto; background: none; transform: none; }
 .nav__toggle i span { width: 16px; height: 1.5px; background: #111; transition: transform 0.3s var(--ease); }
 .mobile-menu .btn--primary { color: #fff; }
+
+/* client feedback round: wide hero frame so the CN Tower stays in view; step video slots */
+.hero__frame { aspect-ratio: 5 / 4; border-radius: 28px; }
+.hero__frame img { object-position: 100% 50%; }
+.hero__frame::before { inset: -10%; background: radial-gradient(circle at 60% 45%, rgba(245, 165, 36, 0.6), rgba(224, 52, 47, 0.28) 40%, transparent 65%); }
+.hero__art { max-width: 520px; }
+@media (min-width: 1081px) { .hero__stage { grid-template-columns: 1fr minmax(300px, 520px) 1fr; } }
+.step__video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--r-lg); overflow: hidden; background: #111; margin: 0.2rem 0 1.2rem; border: 1px solid var(--line); }
+.step__video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+@media (max-width: 1080px) { .hero__art { max-width: 520px; } .hero__frame { aspect-ratio: 4 / 3; } }
+@media (max-width: 560px) { .hero__art { max-width: 100%; } .hero__frame { aspect-ratio: 4 / 3; border-radius: 20px; } }
+
+/* =========================== sales pass: pitch in first screen, mid CTA, call steps =========================== */
+.hero__stage { grid-template-columns: minmax(0, 1.05fr) minmax(280px, 460px) minmax(0, 0.75fr); grid-template-rows: auto; align-items: center; gap: clamp(1.5rem, 3vw, 3rem); padding-block: clamp(2rem, 4vw, 3.5rem) 1rem; }
+.hero__pitch { position: relative; z-index: 1; grid-column: 1; grid-row: 1; display: grid; gap: 1.1rem; max-width: 34rem; }
+.hero__pitch h1 { font-size: clamp(1.9rem, 1rem + 2.6vw, 3.1rem); }
+.hero__pitch .eyebrow { margin: 0; }
+.hero__pitch-sub { font-size: 1.02rem; line-height: 1.6; color: var(--text); margin: 0; max-width: 40ch; }
+.hero__pitch .hero__actions { gap: 0.7rem; }
+.hero__micro { margin: 0; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.04em; color: var(--text-muted); }
+.hero__art { grid-column: 2; grid-row: 1; }
+.hero__annos { grid-column: 3; grid-row: 1; display: grid; gap: 1.4rem; justify-self: end; z-index: 1; }
+.hero__annos .anno { text-align: right; max-width: 26ch; }
+.hero__annos .anno__num { margin-bottom: 0.45rem; }
+.hero__gets { display: grid; gap: 0.7rem; }
+.hero__gets li { position: relative; padding-left: 1.4rem; font-size: 1rem; line-height: 1.5; color: var(--text); }
+.hero__gets li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 9px; height: 9px; background: var(--rule); }
+.hero__gets strong { color: #111; }
+@media (min-width: 1081px) { .hero__bar-grid { grid-template-columns: 1.1fr 0.9fr; } }
+.hero__bar .hero__lede { font-size: 1.05rem; margin-bottom: 1.1rem; }
+
+.band { background: #111; color: #fff; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); }
+.band__inner { display: grid; grid-template-columns: 1.2fr auto; gap: 2rem; align-items: center; padding-block: clamp(1.8rem, 3.5vw, 2.8rem); }
+.band__title { font-size: clamp(1.3rem, 1rem + 1.2vw, 1.8rem); font-weight: 700; letter-spacing: -0.025em; margin: 0 0 0.35rem; }
+.band__sub { margin: 0; color: var(--text-on-dark); max-width: 56ch; }
+.band__actions { display: grid; gap: 0.6rem; justify-items: start; }
+.band .btn--primary { background: #fff; color: #111; }
+.band .btn--primary:hover { background: var(--cream-100); }
+.band__micro { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.04em; color: var(--text-on-dark-muted); }
+
+.cta__how { display: grid; gap: 0.7rem; margin: 0 0 1.4rem; counter-reset: none; }
+.cta__how li { display: grid; grid-template-columns: 30px 1fr; gap: 0.9rem; align-items: start; }
+.cta__how li > span { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid rgba(255,255,255,0.35); font-family: var(--font-mono); font-size: 0.75rem; color: var(--gold); }
+.cta__how strong { display: block; color: #fff; font-size: 1rem; }
+.cta__how em { font-style: normal; font-size: 0.9rem; color: var(--text-on-dark-muted); }
+.cta .perks { margin-top: 0.2rem; }
+
+@media (max-width: 1080px) {
+  .hero__stage { grid-template-columns: 1fr; }
+  .hero__pitch { grid-column: 1; grid-row: 1; max-width: none; }
+  .hero__art { grid-column: 1; grid-row: 2; justify-self: start; }
+  .hero__annos { grid-column: 1; grid-row: 3; justify-self: start; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  .hero__annos .anno { text-align: left; max-width: none; }
+  .hero__rule { top: 58%; }
+  .band__inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .hero__annos { grid-template-columns: 1fr; }
+  .hero__pitch .hero__actions .btn { flex: 1 1 100%; }
+  .band__actions .btn { width: 100%; }
+}

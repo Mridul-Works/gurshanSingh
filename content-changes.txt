@@ -474,3 +474,59 @@ links you post (?utm_source=instagram&utm_campaign=reel1) and they are
 carried into every booking automatically.
   testimonials   Array of real client quotes. The Client stories section
                  stays hidden until it has at least one entry.
+
+=====================================================================
+CLIENT FEEDBACK ROUND (applied 13 September 2026)
+=====================================================================
+ 1. Picture: the hero frame is now a wide 5:4 window cropped to the right
+    edge of the photo, so the CN Tower and Toronto skyline are always in
+    view. Done.
+ 2. "1 hour a day" replaces "30 minutes a day" everywhere: headline, hero
+    annotation, stats strip, checklist, roadmap example, calculator
+    assumptions (1 hour daily content block), share text. Done.
+ 3. "Send me the free PDF" button removed. Done.
+ 4. "300 followers is enough" replaces "1k" in the stats strip and Step 2.
+    Done.
+ 5. Exit pop-up removed. Done.
+ 6. All email forms removed (PDF section and pop-up). The form code stays
+    dormant in script.js in case it is wanted later. Done.
+ 7. "Three people this plan was written for" section deleted. Done.
+ 8. Page order is now: hero, stats, why leave, the 5 steps, what you need,
+    your exit month, FAQ, book a call. Done.
+ 9. Calculator renamed "Your exit month" with a plain explanation: "Put in
+    what your job pays you now. Then set what you'll charge and how many
+    people you'll help. The chart shows, month by month, when your online
+    income becomes bigger than your paycheque. That month is your exit
+    month." Its button now leads to the call. Done.
+10. Each of the 5 steps has a video slot. Paste an embed URL into
+    stepVideos in script.js and a player appears above that step. Ready.
+11. FAQ: the latest AI PDF was not provided, so the current five questions
+    are unchanged. Send the new PDF text and they will be swapped in.
+    Pending.
+12. Calendly stays embedded on the page. No change.
+13. Every "get the free PDF" / "free PDF" link removed from nav, menu,
+    footer, mobile bar, calculator and thank-you card. Done.
+
+=====================================================================
+SALES PASS (13 September 2026)
+=====================================================================
+ a. First screen now sells: the headline, a one-line pitch ("I made
+    $3,200+ online from one platform while working shifts. On a free
+    30 minute call I'll show you the exact plan and pick your niche
+    with you."), the Book button and the reassurance line "Free · 30
+    minutes · Zoom or Google Meet · No card, no pressure" all sit next
+    to the photo, above the EXIT PLAN wordmark. Before this the promise
+    and button were below the fold on a laptop.
+ b. The white bar under the wordmark now lists what you leave the call
+    with: your niche decided, your first 30 days mapped, your exit
+    month. Plus: "One call. No pitch deck. If it's not for you, you
+    still walk away with a plan."
+ c. A mid-page call band after the 5 steps: "Stuck on Step 1? Most
+    people are. Picking a niche is the part everyone overthinks. On the
+    free call we decide it together in 30 minutes."
+ d. Booking section adds "how the call works" in three steps and the
+    risk reversal "Free · 30 minutes · No card, no obligation".
+ e. New FAQ: "Is the call really free? What happens on it?"
+ f. Checklist completion now says "All set. Book your free call."
+ g. Prep eyebrow reads "What you need to start" since it now comes
+    after the steps.

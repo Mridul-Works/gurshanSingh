@@ -260,7 +260,8 @@ small { font-size: 0.6em; }
 .strip__label { font-size: 0.9rem; color: var(--text-on-dark-muted); }
 
 /* =========================== sections =========================== */
-.section { padding-block: clamp(4.5rem, 9vw, 8rem); }
+.section { padding-block: clamp(4.5rem, 9vw, 8rem);
+border: 1px solid rgba(128, 128, 128, 0.349)  }
 .section--paper { background: var(--cream-200); }
 .section__head { max-width: 64ch; margin-bottom: 2rem; }
 .section__head--row { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; max-width: none; flex-wrap: wrap; }

@@ -23,9 +23,6 @@
     //   quote: "I booked the call on a night shift. Three weeks later a guy from my gurdwara paid me to fix his resume and interview prep.",
     //   photo: "assets/clients/harpreet.jpg", proof: "https://..." }
     testimonials: [],
-    // Step videos (optional). Paste a YouTube or Vimeo embed URL per step and a player appears above that step.
-    // Example: { 1: "https://www.youtube.com/embed/VIDEO_ID", 2: "" }
-    stepVideos: {},
   };
 
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -427,21 +424,13 @@
   })();
 
 
-  /* ---------- step videos (only if a URL is configured) ---------- */
-  Object.entries(SITE_CONFIG.stepVideos || {}).forEach(([n, url]) => {
-    if (!url) return;
-    const body = $(`.step__body[data-step="${n}"]`);
-    if (!body) return;
-    const wrap = document.createElement("div");
-    wrap.className = "step__video";
-    const frame = document.createElement("iframe");
-    frame.src = url; frame.loading = "lazy"; frame.allowFullscreen = true;
-    frame.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
-    frame.title = "Step " + n + " video";
-    wrap.appendChild(frame);
-    const h3 = $("h3", body);
-    if (h3) h3.after(wrap); else body.prepend(wrap);
-  });
+
+  /* ---------- videos: only one plays at a time ---------- */
+  const videos = $$("video");
+  videos.forEach((v) => v.addEventListener("play", () => {
+    videos.forEach((o) => { if (o !== v && !o.paused) o.pause(); });
+    track("video_play", { video: v.getAttribute("aria-label") || "" });
+  }));
 
   /* ---------- reading progress + nav shadow + sticky bar ---------- */
   const bar = $("#progressBar");

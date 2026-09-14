@@ -530,3 +530,21 @@ SALES PASS (13 September 2026)
  f. Checklist completion now says "All set. Book your free call."
  g. Prep eyebrow reads "What you need to start" since it now comes
     after the steps.
+
+=====================================================================
+VIDEOS + FONTS + NO GRIDS (14 September 2026)
+=====================================================================
+ - Fonts now match the reference site (cheerful-docs-hub.lovable.app):
+   Inter for everything, including the small labels that were in a
+   monospace face.
+ - The six videos from that site are copied into assets/videos with
+   their poster images and embedded as native players: one under each
+   of the 5 step headings, and "How I'll help you" as its own section
+   before the FAQ with a Book button under it.
+ - Only one video plays at a time. Videos load on demand (preload none)
+   so the page stays fast.
+ - The technical grid background is removed from the page and from the
+   dark sections. Rings, red rule and wordmark in the hero stay.
+ - New section copy: "How I'll help you" / "Two minutes on what the free
+   call actually looks like." / "Watch this before you book. It covers
+   what we do on the call, what you leave with, and what happens after."
